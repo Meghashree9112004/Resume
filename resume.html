@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uttam's Resume</title>
+    <style>
+        /* Root Variables */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --heading-color: #4CAF50;
+            --border-radius: 8px;
+            --page-bg-color: #ecf0f1; /* New background color for the whole page */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c6d5c6; /* Apply background color here */
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--heading-color);
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: var(--accent-color);
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 1.4rem;
+            color: var(--heading-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Skills List */
+        .skills-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .skills-list div {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects, .courses, .achievements, .hobbies {
+            margin-bottom: 2rem;
+        }
+
+        .project-item, .course-item, .achievement-item, .hobby-item {
+            margin-bottom: 1rem;
+        }
+
+        .button {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: var(--primary-color);
+        }
+        .menu {
+    display: none;
+    background-color: #333;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+                color: #4CAF50;
+                border-bottom: 2px solid #4CAF50;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            /* border: 1px solid #ddd; */
+            padding: 12px 20px;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .qualification {
+            font-weight: bold;
+        }
+       
+        .profile-section {
+            flex: 1;
+            display: flex;
+            align-items: right;
+            justify-content: right;
+        }
+
+        .profile-section img {
+            width: 100px;
+            height: 100px;
+            /* border-radius: 100%; */
+            border: white;
+        }
+    
+        /* Ensures the image stays on top of other content */
+   </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="menuButton" class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div id="menu" class="menu">
+                <ul>
+                    <li onclick="navigateToPage('home')">Home</li>
+                    <li onclick="navigateToPage('resume')">Resume</li>
+                    <li onclick="navigateToPage('contact')">Contact</li>
+                </ul>
+            </div>
+            <!-- <div class="container" id="home"> -->
+                <!-- Profile Section -->
+                <!-- <div class="profile-section">
+                    <img src="1733891404362.jpg" alt="Profile Picture"> 
+                   
+                </div> -->
+                <!-- <figure class="profile-section">
+                    <img src="1733891404362.jpg" alt="Profile Picture">
+                </figure> -->
+                
+            <h1>Meghashree</h1>
+            <div class="contact-info">
+                <p><strong>Phone:</strong> +91-8867253315</p>
+                <p><strong>Email:</strong> <a href="mailto:19516uttam@gmail.com">meghaacharya217@gmail.com</a></p>
+                <p><strong>LinkedIn:</strong> <a href="www.linkedin.com/in/meghashree-97063229b" target="_blank">www.linkedin.com/in/meghashree-97063229b</a></p>
+                <p><strong>Github:</strong> <a href="https://github.com/Meghashree9112004/Github_tutorial.git" target="_blank"> https://github.com/Meghashree9112004/Github_tutorial.git</a></p>
+                <p><strong>Address:</strong> “Home” Po:  Shilpashree near padavu school, Attur ,Karkala, Udupi district - 576117 </p>
+            </div>
+        </header>
+
+        <section>
+            <h2 class="section-title">Summary</h2>
+            <p>I'm a Third-year Computer  
+                Science & Engineering student deeply passionate about emerging 
+                technologies.Proficient in C , learning new skills 
+                through internships and projects. Currently seeking a opportunity that would help gain industry-level knowledge 
+                and discover new experiences. </p></section>
+                <section>
+                    <!-- <h2 class="section-title">Education</h2>
+                    <p><strong>Bachelor’s of Engineering – Computer Science & Engineering</strong><br>
+                    Mangalore Institute of Technology & Engineering     2024-Present 
+                         CGPA:9.39</p>
+                    <p><strong>Senior Secondary (12th) - KSEEB      2020-2022        Percentage:94% </strong></p>
+                    <p><strong>Secondary School (SSLC) - KSEEB      2019-2020        Percentage:94.24%</strong></p>
+                         -->
+                         <h2 class="section-title">Education</h2>
+                         <table>
+                            <tr>
+
+                                <td>Bachelor of Engineering (CSE)</td>
+                                
+                                <td>Mangalore Institute of Technology & Engineering</td>
+                                <td>2024 - Present</td>
+                                <td>CGPA:8.14</td>
+                            </tr>
+                            <tr>
+                                <td>Senior Secondary (12th)</td>
+                                <td>Dr. NSAM PU college Nitte,Karkala</td>
+                                <td>2020 - 2022</td>
+                                <td>Percentage:82.66%</td>
+                            </tr>
+                            <tr>
+                                <td>Secondary School (SSLC)</td>
+                                <td> SVT high school,  Karkala  </td>
+                                <td>2019 - 2020</td>
+                                <td>Percentage: 90.08%</td>
+                            </tr>
+                        </table>
+                    
+                </section>
+        
+        <section>
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-list">
+                <div>
+                    <strong>Languages</strong>
+                    <p>C, Python. </p>
+                </div>
+                <div>
+                    <strong>Interface</strong>
+                    <p>HTML, CSS</p>
+                </div>
+                
+                <div>
+                    <strong>Database</strong>
+                    <p>SQL</p>
+                </div>
+                <div>
+                    <strong>Tools</strong>
+                    <p>Visual Studio Code,GitHub, Figma, Eclipse.  </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <h2 class="section-title">Internship</h2>
+            <p><strong>Edunet – AICTE Internship (June – July 2024) –</strong>Leveraging SkillsBuild & IBM Cloud Platform in Emerging 
+                Technologies (AI & Cloud)</p>
+            
+        </section>
+
+        <section>
+            <h2 class="section-title">Projects</h2>
+            <div class="projects">
+                <div class="project-item">
+                    <p><strong>Hotel Bill Management System -</strong>A C program was developed from 15/05/2024 to 19/05/2024 to create a  
+                        Hotel Bill Management System.Project mainly focuses on food ordering system. There are two users-Restaurant 
+                        Owner and Customer.  </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Courses & Workshops</h2>
+            <ul>
+                <li> Get Started with RPA Developer Foundation(v2021.10) - UiPath</li>
+                    <li>Google Project Management Professional Certificate - Coursera</li> 
+                    <li> Introduction to Data science -Infosys</li>
+                    <li>Enterprise Data science in practice-IBM </li>
+                    <li> UiPath Automation explorer for student- Uipath Academic Alliance</li> 
+                    <li> Certified in the course ’Design and analysis of algorithm’ authorized by NPTEL in the year 2024</li>
+               
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Achievements & Activities</h2>
+            <ul>
+                <li>Participated in DEVELOPHER coding competition organized by C.O.R.E , MITE. </li>
+                <li>Participated in CSS BATTLE competition organized by C.O.R.E , MITE.</li>
+            </ul>
+        </section>
+
+        <!-- <section>
+            <h2 class="section-title">Hobbies</h2>
+            <ul>
+                <li>Exploring new things</li>
+                <li>Blogging</li>
+                <li>Volunteer work</li>
+                <li>Sketching</li>
+                <li>Hiking</li>
+                <li>Fitness and Wellness</li>
+            </ul>
+        </section> -->
+
+        <a href="Resume_Megha_final[1].pdf" class="button" download>Download Resume</a>
+    </div>
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>
